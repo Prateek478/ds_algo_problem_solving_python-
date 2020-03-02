@@ -17,15 +17,15 @@ def groupusinglistc(input,n):
     return[(input[i],j) for i in range(len(input)) for j in input[i+1:] if ((input[i]+j == n) and ((input[i] != n) or (j != n)))]
 
 def two_sum_n(a, k):
-        pairs = list()
-        d = dict()
-        for i in range(0, len(a)):
-                d[a[i]] = i   # takes O(n)
-        for i in range(0, len(a)): # takes O(n)
-                if k - a[i] in d.keys() and  d[k - a[i]] != i:
-                        pairs.append((a[i], k - a[i]))
-        # instead of set, can also check in above if that pair exists in list before adding
-        return set(pairs)  # O(n), overall time complexity = O(n) + O(n) + O(n) = O(n)
+	pairs = list()
+	d = dict()
+	for i in a:
+		d[k-i] = i   # takes O(n)
+	for i in a: # takes O(n)
+		if i in d.keys():
+			pairs.append((i, k - i))
+    # instead of set, can also check in above if that pair exists in list before adding
+    return pairs  # O(n), overall time complexity = O(n) + O(n) + O(n) = O(n)
 
 if __name__ == "__main__":
     input = [3,20,2,12,7,0,5,8,9,2,10,6,-1]
