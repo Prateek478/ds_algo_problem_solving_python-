@@ -1,3 +1,8 @@
+'''
+Find the closest value in BST. This would also means construction of BST.
+Example: assuming bst is present with node values 10, 7, 5, 6, 8,12 
+so closest value of 4 is 5 and handle all corner cases(production ready cases)
+'''
 def closest_value_in_list_logn_my_try(a, k):
 	# assuming a is sorted
 	if len(a) == 0:
