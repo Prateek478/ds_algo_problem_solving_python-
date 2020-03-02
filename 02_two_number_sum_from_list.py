@@ -1,3 +1,10 @@
+'''
+Two number sum i.e given a array find all the pairs whose sum equal to given k
+
+Eg: [1,5,7,8,2,0] and k=7
+Result is [(0,7),(7,0),(2,5),(5,2)]
+'''
+
 def setofgroup(input, n):
     input.sort()
     for i in range(len(input)):
