@@ -1,3 +1,7 @@
+'''
+Find there largest numbers in an array, and better lets write a program for N large numbers
+'''
+
 def find_n_max_array_brute_force(a, N): # O(N*n) where n is size of an array\
 	n_max = list()
 	for _ in range(N):
