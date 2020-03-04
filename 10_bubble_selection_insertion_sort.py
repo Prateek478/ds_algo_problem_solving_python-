@@ -10,14 +10,12 @@ print('bubbleSorted Array in Ascending Order: {}'.format(data))
 
 
 # Selection sort in Python
-def selectionSort(array, size):
-    for step in range(size):
-        min_idx = step
-        for i in range(step + 1, size):
-            # To sort in descending order, change > to < in this line.
-            if array[i] < array[min_idx]:
-                min_idx = i
-        (array[step], array[min_idx]) = (array[min_idx], array[step])
+def selectionSort(a, size):
+    for i in range(size-1):
+        for j in range(i+1,size):
+            if a[i] > a[j]:
+                a[i],a[j] = a[j],a[i]
+    return a
 
 data = [-2, 45, 0, 11, -9]
 size = len(data)
